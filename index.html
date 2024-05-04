@@ -36,27 +36,29 @@
 
   <div class="button-area">
     <div class="grid-container">
-      <div class="item" onclick="clickNumber(this)">7</div>
-      <div class="item" onclick="clickNumber(this)">8</div>
-      <div class="item" onclick="clickNumber(this)">9</div>
-      <div class="item-del" onclick="clickDelete()">DEL</div>
-      <div class="item" onclick="clickNumber(this)">4</div>
-      <div class="item" onclick="clickNumber(this)">5</div>
-      <div class="item" onclick="clickNumber(this)">6</div>
-      <div class="item" onclick="clickOperation(this)">+</div>
-      <div class="item" onclick="clickNumber(this)">1</div>
-      <div class="item" onclick="clickNumber(this)">2</div>
-      <div class="item" onclick="clickNumber(this)">3</div>
-      <div class="item" onclick="clickOperation(this)">-</div>
-      <div class="item" onclick="clickNumber(this)">.</div>
-      <div class="item" onclick="clickNumber(this)">0</div>
-      <div class="item" onclick="clickOperation(this)">/</div>
-      <div class="item" onclick="clickOperation(this)">x</div>
-      <div class="item-reset" onclick="clickReset()">RESET</div>
-      <div class="item-equal" onclick="clickResult()">=</div>
-    </div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">7</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">8</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">9</div>
+      <div class="item-del" onclick="clickDelete()" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">DEL</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">4</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">5</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">6</div>
+      <div class="item" onclick="clickOperation(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">+</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">1</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">2</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">3</div>
+      <div class="item" onclick="clickOperation(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">-</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">.</div>
+      <div class="item" onclick="clickNumber(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">0</div>
+      <div class="item" onclick="clickOperation(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">/</div>
+      <div class="item" onclick="clickOperation(this)" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">x</div>
+      <div class="item-reset" onclick="clickReset()" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">RESET</div>
+      <div class="item-equal" onclick="clickResult()" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">=</div>
+    </div> 
   </div>
   
+  <!-- sound -->
+
   <script src="js/script.js"></script>
 </body>
 </html>

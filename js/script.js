@@ -80,3 +80,11 @@ function clickOperation(element) {
 
     hasClickOperation = true;
 }
+
+function clickButton(object) {
+    object.classList.add('item-animation');
+}
+
+function releaseButton(object) {
+    object.classList.remove('item-animation');
+}
