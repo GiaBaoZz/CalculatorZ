@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons8-calculator.gif">
+  
+  <title>Gia Bao | Calculator app</title>
+
+  <link rel="stylesheet" href="css/styleindex.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+                
+
+</head>
+<body>
+  <div class="header">
+    <span class="text-calc">
+      calc
+    </span>
+
+    <span class="text-theme">
+      THEME
+    </span>
+
+    
+  </div>
+
+  <div class="screen">
+    <div id="text-input-tmp"></div>
+    <input id="text-input" type="text" readonly value="0">
+  </div>
+
+  <div class="button-area">
+    <div class="grid-container">
+      <div class="item" onclick="clickNumber(this)">7</div>
+      <div class="item" onclick="clickNumber(this)">8</div>
+      <div class="item" onclick="clickNumber(this)">9</div>
+      <div class="item-del" onclick="clickDelete()">DEL</div>
+      <div class="item" onclick="clickNumber(this)">4</div>
+      <div class="item" onclick="clickNumber(this)">5</div>
+      <div class="item" onclick="clickNumber(this)">6</div>
+      <div class="item" onclick="clickOperation(this)">+</div>
+      <div class="item" onclick="clickNumber(this)">1</div>
+      <div class="item" onclick="clickNumber(this)">2</div>
+      <div class="item" onclick="clickNumber(this)">3</div>
+      <div class="item" onclick="clickOperation(this)">-</div>
+      <div class="item" onclick="clickNumber(this)">.</div>
+      <div class="item" onclick="clickNumber(this)">0</div>
+      <div class="item" onclick="clickOperation(this)">/</div>
+      <div class="item" onclick="clickOperation(this)">x</div>
+      <div class="item-reset" onclick="clickReset()">RESET</div>
+      <div class="item-equal" onclick="clickResult()">=</div>
+    </div>
+  </div>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
