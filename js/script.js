@@ -88,3 +88,80 @@ function clickButton(object) {
 function releaseButton(object) {
     object.classList.remove('item-animation');
 }
+
+function clickToggle() {
+    let toggleButton = document.getElementById('toggle-button');
+    let currentMarginLeft = parseInt(getComputedStyle(toggleButton).marginLeft);
+    
+    if (currentMarginLeft == 5) {
+        toggleButton.style.animationName = 'toggle-animation-1';
+        changeTheme2();
+    } else if (currentMarginLeft == 25) {
+        toggleButton.style.animationName = 'toggle-animation-2';
+        changeTheme3();
+        
+    } else {
+        toggleButton.style.animationName = 'toggle-animation-3';
+        changeTheme1();
+    }
+   
+}
+function changeTheme1() {
+        document.body.className = 'body-theme1';
+
+        document.getElementsByClassName('text-calc-theme3')[0].className = 'text-calc';
+        document.getElementsByClassName('text-theme-theme3')[0].className = 'text-theme';
+        document.getElementById('toggle-number').style.color = 'white';
+        document.getElementById('toggle-switch').style.backgroundColor = 'var(--very-dark-desaturated-blue-2)';
+        document.getElementById('toggle-button').style.backgroundColor = 'var(--red)';
+        document.getElementsByClassName('screen-theme3')[0].className = 'screen';
+        document.getElementById('text-input').className = '';
+        document.getElementsByClassName('button-area-theme3')[0].className = 'button-area';
+        document.getElementsByClassName('item-reset-theme3')[0].className = 'item-reset';
+        document.getElementsByClassName('item-del-theme3')[0].className = 'item-del';
+        document.getElementsByClassName('item-equal-theme3')[0].className = 'item-equal';
+
+        let itemList = document.getElementsByClassName('item');
+
+        for (let i=0; i<itemList.length; i++) {
+            itemList[i].style.backgroundColor = 'var(--light-grayish-orange)';
+            itemList[i].style.color = 'var(--very-dark-grayish-blue)';
+            itemList[i].style.boxShadow  = '0px 5px var( --grayish-orange)';
+        }
+}
+
+function changeTheme2() {
+        document.body.className = 'body-theme2';
+        document.getElementsByClassName('text-calc')[0].className = 'text-calc-theme2';
+        document.getElementsByClassName('text-theme')[0].className = 'text-theme-theme2';
+        document.getElementById('toggle-number').style.color = 'var(--very-dark-grayish-yellow)';
+        document.getElementById('toggle-switch').style.backgroundColor = 'var(--grayish-red)';
+        document.getElementById('toggle-button').style.backgroundColor = 'var(--orange)';
+        document.getElementsByClassName('screen')[0].className = 'screen-theme2';
+        document.getElementById('text-input').className = 'screen-input-theme2';
+        document.getElementsByClassName('button-area')[0].className = 'button-area-theme2';
+}
+
+function changeTheme3() {
+        document.body.className = 'body-theme3';
+
+        document.getElementsByClassName('text-calc-theme2')[0].className = 'text-calc-theme3';
+        document.getElementsByClassName('text-theme-theme2')[0].className = 'text-theme-theme3';
+        document.getElementById('toggle-number').style.color = 'var(--light-yellow)';
+        document.getElementById('toggle-switch').style.backgroundColor = 'var(--very-dark-violet-2)';
+        document.getElementById('toggle-button').style.backgroundColor = 'var(--pure-cyan)';
+        document.getElementsByClassName('screen-theme2')[0].className = 'screen-theme3';
+        document.getElementById('text-input').className = 'screen-input-theme3';
+        document.getElementsByClassName('button-area-theme2')[0].className = 'button-area-theme3';
+        document.getElementsByClassName('item-reset')[0].className = 'item-reset-theme3';
+        document.getElementsByClassName('item-del')[0].className = 'item-del-theme3';
+        document.getElementsByClassName('item-equal')[0].className = 'item-equal-theme3';
+
+        let itemList = document.getElementsByClassName('item');
+
+        for (let i=0; i<itemList.length; i++) {
+            itemList[i].style.backgroundColor = 'var(--very-dark-violet)';
+            itemList[i].style.color = 'var(--light-yellow)';
+            itemList[i].style.boxShadow  = '0 5px var(--dark-magenta)';
+        }
+}
